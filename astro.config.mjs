@@ -7,7 +7,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 // Importa la integración de Clerk para autenticación
-//import clerk from '@clerk/astro';
+import clerk from '@clerk/astro';
 
 // Importa el adaptador de Cloudflare para desplegar en Workers
 import cloudflare from '@astrojs/cloudflare';
