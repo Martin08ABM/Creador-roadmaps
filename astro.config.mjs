@@ -4,12 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import node from "@astrojs/node";
 import clerk from "@clerk/astro";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
     integrations: [clerk()],
-    adapter: node({
-        mode: "standalone"
-    }),
+    adapter: cloudflare(),
     output: 'server',
     vite: {
         plugins: [tailwindcss()],
