@@ -1,3 +1,20 @@
-kv_namespaces = [
-  { binding = "progresso_dev", id = "0914cacba76d430c9fb3ab05a514efb3" }
-]
+# Nombre de tu proyecto en Cloudflare
+name                    = "progresso-dev"
+
+# Fecha de compatibilidad (usa siempre la fecha actual o la mínima requerida)
+compatibility_date      = "2025-05-01"
+
+# Tipo de proyecto (JavaScript para Astro)
+type                    = "javascript"
+
+# Carpeta donde Astro deja el build
+pages_build_output_dir  = "./dist"
+
+[build]
+  # Comando que genera la carpeta de salida
+  command = "npm run build"
+
+# KV namespaces (ejemplo para 'progresso_dev')
+[[kv_namespaces]]
+  binding = "progresso_dev"
+  id      = "0914cacba76d430c9fb3ab05a514efb3"
