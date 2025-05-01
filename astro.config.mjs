@@ -69,5 +69,8 @@ export default defineConfig({
         external: ['fsevents'], // Añade fsevents también para la fase de build general
       },
     },
+    optimizeDeps: {
+      exclude: ['fsevents'], // Añade esta línea para evitar la optimización de fsevents
+    },
   },
 });
