@@ -40,7 +40,7 @@ export default defineConfig({
     },
 
     ssr: {
-      // Externaliza módulos nativos de Node.js y librerías problemáticas
+      // Externaliza módulos nativos de Node.js y librerías problemáticas para SSR
       external: [
         // CommonJS built-ins
         'fs','path','url','crypto',
@@ -59,9 +59,15 @@ export default defineConfig({
         'node:process','node:v8','node:tls','node:querystring','node:vm',
         // Excluye jiti para evitar empaquetar import dinámicas que fallan
         'jiti',
+        'fsevents', // Añade fsevents aquí para SSR
       ],
       // No externaliza jiti internamente, para que Vite no intente procesarlo
       noExternal: ['jiti'],
+    },
+    build: {
+      rollupOptions: {
+        external: ['fsevents'], // Añade fsevents también para la fase de build general
+      },
     },
   },
 });
