@@ -1,0 +1,11 @@
+---
+import { UserButton } from '@clerk/astro/components'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout>
+    <UserButton>
+        <UserButton.UserProfilePage label="account" />
+        <UserButton.UserProfilePage label="security" />
+    </UserButton>
+</Layout>

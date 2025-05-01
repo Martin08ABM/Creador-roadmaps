@@ -1,11 +1,22 @@
-<main class="w-full p-2">
+<main class="w-full p-2"><!-- Main de la parte gratuita de la web -->
+    <!-- Div principar que contiene todo el contenido de la web -->
     <div class="w-full">
-        <div class="bg-[white] w-full mx-auto flex flex-col items-center justify-center mt-10">
-            <input type="text" class="w-2/4 h-10 p-2 black border-solid border-2 rounded-lg" placeholder="Explica a la IA lo que quieres aprender..." />
-            <div class="flex flex-col justify-center align-center">
-                <p class="text-[12px] p-2">Da más contexto a la IA, seleccionando los siguientes botones:</p>
-                <div class="inline-block relative" id="dropdown-container">
-                    <div class="w-full align-middle justify-center flex flex-row mx-auto mb-2 mt-2">
+        <div class="bg-[white] w-full mx-auto flex flex-col items-center justify-center mt-5"><!-- Div con el background -->
+            <div class="flex flex-col items-center justify-center">
+                <h1 class="text-4xl text-black font-bold mb-2">CREA LOS MEJORES ROADMAPS QUE HAY</h1>
+                <p class="text-[14px] mb-2">Describe lo que quieres aprender, explicalo, y envialo para que la IA te genere un roadmap perfecto para ti</p>
+            </div>
+            <!-- Input de texto que contiene el mensaje que se le va a enviar a la IA -->
+            <div class="flex flex-row w-full justify-center align-center mt-4 mb-2"><!-- Div que contiene el input y el botón de enviar -->
+                <input type="text" class="w-2/4 h-10 p-2 black border-solid border-2 rounded-lg mt-4" placeholder="Explica a la IA lo que quieres aprender..." / id="input-text"><!-- Input principal con el que se le da la información a la IA de lo que se quiere aprender -->
+                <div class="flex flex-col justify-center align-center ml-4"><!-- Div del botón de enviar -->
+                    <button type="submit" class="border-none bg-blue-800 text-white text-[16px] font-bold w-18 h-8 p-1 rounded-xl mt-3" id="submitButton">Enviar</button>
+                </div>
+            </div>
+            <div class="flex flex-col justify-center align-center"><!-- Div que contiene el input y el botón de enviar -->
+                <p class="text-[12px] p-2">Da más contexto a la IA, seleccionando los siguientes botones:</p> <!-- Texto informativo -->
+                <div class="inline-block relative" id="dropdown-container"><!-- Div que contiene el botón de desplegable y el contenedor de las opciones seleccionadas -->
+                    <div class="w-full align-middle justify-center flex flex-row mx-auto mb-2 mt-2"><!-- Div que contiene el botón de desplegable -->
                         <button class="w-48 flex flex-row text-black bg-[#F5F7FA] border-solid border-2 border-black rounded-lg px-1 py-1 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50" id="menu-button" aria-expanded="false" aria-haspopup="true">
                             Seleccionar opciones
                             <svg class="ml-3 mx-auto h-5 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -13,52 +24,113 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="absolute right-0 z-10 mt-2 mx-auto w-150 bg-white border border-gray-300 rounded-md shadow-lg hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-items" id="menu-items">
-                        <div class="py-1 grid grid-cols-2 md:grid-cols-4 gap-1" role="none" id="checkbox-container">
+                    <!-- Contenedor del menú desplegable -->
+                    <!-- Este contenedor se mostrará al hacer clic en el botón de menú desplegable -->
+                    <div class="absolute items-center right-0 z-10 mt-2 w-200 bg-white border border-gray-300 rounded-md shadow-lg hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-items" id="menu-items">
+                        <!-- Contenedor de las opciones seleccionadas -->
+                        <div class="py-2 grid grid-cols-2 md:grid-cols-4 gap-1" role="none" id="checkbox-container">
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="front-end" /> Front-End
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="front-end" id="frontend" /> FrontEnd
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="backend-end" /> Back-End
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="backend-end" id="backend" /> BackEnd
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="fullstack" /> FullStack
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="fullstack" id="fullstack" /> FullStack
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="mobile" /> Mobile
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="mobile" id="mobile" /> Mobile
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="videogames" /> Videojuegos
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="videogames" id="videogames" /> Videojuegos
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="dataScience" /> Data Science
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="dataScience" id="dataScience" /> Data Science
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="devOps" /> DevOps
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="devOps" id="devOps" /> DevOps
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="cibersecurity" /> Ciberseguridad
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="cibersecurity" id="cibersevurity" /> Ciberseguridad
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="cloudEngineer" /> Cloud
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="cloudEngineer" id="cloudEngineer" /> Cloud
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="machineLearning" /> Machine Learning
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="machineLearning" id="machineLearning" /> Machine Learning
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="desktopDeveloper" /> Escritorio
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="desktopDeveloper" id="desktopDeveloper" /> Apps de Escritorio
                             </label>
                             <label class="block px-2 py-1 text-sm text-gray-600 hover:bg-gray-400 transition duration-300 ease-in-out" role="menuitem">
-                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="linuxExpert" /> Linux
+                                <input type="checkbox" class="mr-1 option-checkbox" name="frontend" value="linuxExpert" id="linuxExpert" /> Linux
                             </label>
                         </div>
                     </div>
                 </div>
+                <!-- Contenedor que mostrará las opciones seleccionadas -->
                 <div id="selected-options" class="flex flex-wrap gap-2 mt-4 max-w-lg"></div>
+            </div>
+            <!-- Mensaje de los inputs de prueba que quedan -->
+            <div class="flex flex-col items-center justify-center mb-2 border-2 border-neutral-500 rounded-md p-2 w-2/5 mt-4">
+                <p class="text-black font-bold">Prueba Gratis</p>
+                <span class="text-[12px] text-neutral-600">
+                    Te quedan <span id="remainingInputs" class="font-bold">3</span> inputs de prueba.
+                    Si quieres tener más inputs, <a class="text-blue-500 underline font-black" href="../Authentication/signin.astro">actualiza a la versión PRO</a>
+                </span>
             </div>
         </div>
     </div>
 <script>
+    // SCRIPT PARA MANEJAR LOS INPUTS RESTANTES Y EL CONTADOR
+    document.addEventListener('DOMContentLoaded', () => {
+        const remainingInputs = document.getElementById('remainingInputs');
+        const submitButton = document.getElementById('submitButton');
+
+        let inputsLeft = 3; // Número de inputs de prueba restantes
+
+        // Recuperar el estado de los inputs restantes desde localStorage al cargar la página
+        const savedInputsLeft = localStorage.getItem('inputsLeft');
+        if (savedInputsLeft) {
+            inputsLeft = parseInt(savedInputsLeft, 10);
+            remainingInputs.textContent = inputsLeft;
+        } else {
+            remainingInputs.textContent = inputsLeft; // Mostrar el valor inicial
+        }
+
+        // Deshabilitar el botón si no hay inputs restantes
+        if (inputsLeft <= 0) {
+            submitButton.disabled = true;
+        }
+
+        // Actualizar el contador de inputs restantes
+        submitButton.addEventListener('click', () => {
+            if (inputsLeft > 0) {
+                inputsLeft--;
+                remainingInputs.textContent = inputsLeft;
+                localStorage.setItem('inputsLeft', inputsLeft); // Guardar el estado en localStorage
+            } else {
+                alert('No tienes más inputs de prueba disponibles.');
+                submitButton.disabled = true; // Deshabilitar el botón si no hay inputs restantes
+            }
+        });
+
+        // Manejo de la tecla Enter
+        submitButton.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                if (inputsLeft > 0) {
+                    inputsLeft--;
+                    remainingInputs.textContent = inputsLeft;
+                    localStorage.setItem('inputsLeft', inputsLeft);
+                } else {
+                    alert('No tienes más inputs de prueba disponibles.');
+                    submitButton.disabled = true;
+                }
+            }
+        });
+    });
+
+    // SCRIPT PARA MANEJAR EL DESPLEGABLE Y LAS OPCIONES
     document.addEventListener('DOMContentLoaded', () => {
         const dropdownButton = document.getElementById('menu-button');
         const dropdownItems = document.getElementById('menu-items');
