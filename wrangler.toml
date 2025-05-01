@@ -1,6 +1,3 @@
-kv_namespaces: [
-    {
-      binding: progresso_dev,
-      id: 0914cacba76d430c9fb3ab05a514efb3
-    }
-  ]
+kv_namespaces = [
+  { binding = "progresso_dev", id = "0914cacba76d430c9fb3ab05a514efb3" }
+]
