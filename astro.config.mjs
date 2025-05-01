@@ -10,7 +10,6 @@ export default defineConfig({
     integrations: [clerk()],
     adapter: cloudflare({
         mode: 'directory',
-        enableSession: false
     }),
     output: 'server',
     vite: {
