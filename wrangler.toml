@@ -16,4 +16,4 @@ API_URL = ""
 [[kv_namespaces]]
 binding = "PROGRESSO_KV"
 # El ID se debe configurar en Cloudflare Pages
-id      = ""
+id      = "0914cacba76d430c9fb3ab05a514efb3"
