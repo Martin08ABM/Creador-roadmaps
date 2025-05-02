@@ -14,5 +14,6 @@ API_URL = ""
 
 # KV namespace para tu binding
 [[kv_namespaces]]
-binding = ""
+binding = "PROGRESSO_KV"
 # El ID se debe configurar en Cloudflare Pages
+id      = ""
