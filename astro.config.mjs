@@ -8,7 +8,6 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   integrations: [clerk()],
   adapter: cloudflare({
-    mode: 'directory',
   }),
   output: 'server',
   vite: {
